@@ -38,9 +38,16 @@ app.use(session({
     }
 }));
 
+//inizializzazione Passport
 app.use(passport.initialize());
 app.use(passport.session());
 
+const User = require('./models/User');
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+//routes
 const authRoutes = require('./routes/auth');
 app.use('/api/auth', authRoutes);
 

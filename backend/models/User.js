@@ -14,6 +14,6 @@ const userSchema = new mongoose.Schema({
     }
 }, {timestamps: true});
 
-userSchema.plugin(passForMongoose, {usernameField: 'email'});
+userSchema.plugin(passForMongoose.default || passForMongoose, {usernameField: 'email'});
 
 module.exports = mongoose.model('User', userSchema);
