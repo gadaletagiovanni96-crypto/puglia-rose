@@ -1,38 +1,106 @@
 /* Login.css */
+body {
+    /* Sfondo rosa chiarissimo, caldo e luminoso */
+    background-color: #fdf6f7; 
+    margin: 0;
+    /* Font di base pulito per la leggibilità */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 .login-container {
-    max-width: 400px;
-    margin: 50px auto;
-    font-family: sans-serif;
+    background-color: #ffffff;
+    padding: 45px 40px;
+    /* Bordi leggermente squadrati, stile "carta intestata" o etichetta */
+    border-radius: 4px; 
+    /* Ombra morbida ma scaldata con un tocco di rosso */
+    box-shadow: 0 15px 35px rgba(114, 47, 55, 0.08); 
+    width: 100%;
+    max-width: 360px;
+    /* Un dettaglio elegante: una linea color rosato intenso in alto */
+    border-top: 4px solid #b76e79; 
+}
+
+.login-container h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 26px;
+    color: #4a2e32; /* Un borgogna scuro/vinaccia, molto professionale */
+    text-align: center;
+    /* Font classico per il titolo, dà subito un tono premium */
+    font-family: 'Georgia', serif; 
+    font-weight: normal;
+    letter-spacing: 0.5px;
 }
 
 .login-error {
-    color: red;
-    margin-bottom: 15px;
+    background-color: #fcf0f1;
+    color: #9e4751;
+    padding: 12px;
+    border-left: 3px solid #9e4751;
+    font-size: 14px;
+    margin-bottom: 24px;
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    color: #725b5e;
+    margin-bottom: 8px;
+    text-transform: uppercase; /* Effetto più rigoroso e ordinato */
+    letter-spacing: 0.5px;
 }
 
 .login-input {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    box-sizing: border-box; /* Evita che il padding sbordi */
+    padding: 12px 14px;
+    border: 1px solid #e8dada; /* Grigio-rosa molto delicato */
+    border-radius: 2px;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: #4a2e32;
+    background-color: #faf7f7;
+    transition: all 0.3s ease;
+}
+
+/* Quando l'utente clicca sull'input */
+.login-input:focus {
+    outline: none;
+    border-color: #b76e79;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(183, 110, 121, 0.15);
+}
+
+.login-input::placeholder {
+    color: #c9bcbc;
 }
 
 .login-button {
-    padding: 10px;
-    cursor: pointer;
-    background-color: #007bff;
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #b76e79; /* Colore rosato intenso / Rose Gold */
     color: white;
     border: none;
-    border-radius: 4px;
-    font-weight: bold;
+    border-radius: 2px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .login-button:hover {
-    background-color: #0056b3;
+    background-color: #9c5c66; /* Si scurisce leggermente al passaggio del mouse */
 }

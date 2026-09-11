@@ -17,12 +17,24 @@ const buyTicket = async (req, res) => {
     }
 };
 
+const resoBiglietto = async (req,res) => {
+    try {
+        const {ticketId} = req.body;
+        
+        await Ticket.findOneAndDelete({qrCodeToken: ticketId});
+        res.status(201).json({message:'Biglietto rimosso con successo'});
+    } catch (error) {
+        res.status(500).json({error: 'Errore nella rimozione del biglietto'});
+    }
+}
+
 const getMyTickets = async (req, res) => {
     try {
         const tickets = await Ticket.find({ owner: req.user._id });
         res.status(200).json(tickets);
     } catch (error) {
         res.status(500).json({ error: 'Errore nel recupero dei biglietti' });
+        console.error(error);
     }
 };
 
@@ -54,4 +66,4 @@ const scanTicket = async (req,res)=>{
     }
 }
 
-module.exports = {buyTicket, getMyTickets, scanTicket};
+module.exports = {buyTicket, getMyTickets, scanTicket, resoBiglietto};

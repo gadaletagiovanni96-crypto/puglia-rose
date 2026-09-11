@@ -1,0 +1,34 @@
+.dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #4a2e32;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.dashboard-title {
+    font-family: 'Georgia', serif;
+    font-size: 32px;
+    color: #b76e79;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e8dada;
+    padding-bottom: 10px;
+}
+
+.dashboard-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(114, 47, 55, 0.05);
+    border-top: 3px solid #b76e79;
+}
+
+.dashboard-card h3 {
+    margin-top: 0;
+    color: #4a2e32;
+    font-family: 'Georgia', serif;
+}
+
+.dashboard-card p {
+    color: #725b5e;
+    line-height: 1.6;
+}

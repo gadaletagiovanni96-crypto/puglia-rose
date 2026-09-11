@@ -1,0 +1,19 @@
+.home-container {
+    text-align: center;
+    color: #4a2e32;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.home-title {
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    color: #b76e79;
+    margin-bottom: 20px;
+}
+
+.home-subtitle {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    line-height: 1.6;
+}
